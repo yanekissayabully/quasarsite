@@ -1,13 +1,14 @@
 // "use client"
 
 // import { Button } from "@/components/ui/button"
-// import { ArrowRight, Code2, Bot, Smartphone } from "lucide-react"
+// import { ArrowRight } from "lucide-react"
 // import { motion } from "framer-motion"
+// import TiltedCard from "./TiltedCard"
 
 // export function Hero() {
 //   return (
-//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-//       {/* Animated Background Elements */}
+//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
+//       {/* Animated Background */}
 //       <div className="absolute inset-0 overflow-hidden">
 //         <motion.div
 //           animate={{
@@ -36,78 +37,70 @@
 //       </div>
 
 //       <div className="container mx-auto px-4 relative z-10">
-//         <div className="max-w-5xl mx-auto text-center">
+//         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+//           {/* Left Content */}
 //           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6 }}
-//             className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary"
+//             initial={{ opacity: 0, x: -20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.7 }}
+//             className="text-left"
 //           >
-//             Инновационные цифровые решения
-//           </motion.div>
-
-//           <motion.h1
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: 0.1 }}
-//             className="text-5xl md:text-7xl font-bold mb-6 text-balance"
-//           >
-//             Создаём <span className="text-primary">цифровые продукты</span> будущего
-//           </motion.h1>
-
-//           <motion.p
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: 0.2 }}
-//             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto text-balance"
-//           >
-//             Разработка сайтов, Telegram Mini Apps и ботов с использованием современных технологий. Превращаем ваши идеи
-//             в реальность.
-//           </motion.p>
-
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: 0.3 }}
-//             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-//           >
-//             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-//               Обсудить проект
-//               <ArrowRight className="ml-2" size={20} />
-//             </Button>
-//             <Button
-//               size="lg"
-//               variant="outline"
-//               className="text-lg px-8 border-primary/30 hover:bg-primary/10 bg-transparent"
+//             <motion.h1
+//               initial={{ opacity: 0, y: 20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.7, delay: 0.1 }}
+//               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
 //             >
-//               Наши работы
-//             </Button>
+//               Хотите <span className="text-primary">продающий</span> сайт?
+//             </motion.h1>
+
+//             <motion.div
+//               initial={{ opacity: 0, y: 20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.7, delay: 0.4 }}
+//               className="flex flex-col sm:flex-row gap-4"
+//             >
+//               <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 h-12">
+//                 Получить бесплатный аудит
+//                 <ArrowRight className="ml-2" size={20} />
+//               </Button>
+//               <Button
+//                 size="lg"
+//                 variant="outline"
+//                 className="text-lg px-8 h-12 border-primary/30 hover:bg-primary/10 bg-transparent"
+//               >
+//                 Смотреть кейсы
+//               </Button>
+//             </motion.div>
 //           </motion.div>
 
-//           {/* Feature Icons */}
+//           {/* Right - TiltedCard */}
 //           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: 0.4 }}
-//             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+//             initial={{ opacity: 0, x: 20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.7, delay: 0.2 }}
+//             className="flex items-center justify-center"
 //           >
-//             {[
-//               { icon: Code2, title: "Веб-разработка", desc: "Современные сайты и приложения" },
-//               { icon: Smartphone, title: "Telegram Mini Apps", desc: "Мини-приложения для Telegram" },
-//               { icon: Bot, title: "Боты", desc: "Автоматизация бизнес-процессов" },
-//             ].map((item, index) => (
-//               <motion.div
-//                 key={item.title}
-//                 initial={{ opacity: 0, y: 20 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-//                 className="p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all group"
-//               >
-//                 <item.icon className="w-12 h-12 text-primary mb-4 mx-auto group-hover:scale-110 transition-transform" />
-//                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-//                 <p className="text-sm text-muted-foreground">{item.desc}</p>
-//               </motion.div>
-//             ))}
+//             <TiltedCard
+//               imageSrc="/corporate-website-modern-design-purple.jpg" // Замените на ваш путь к изображению
+//               altText="Пример продающего сайта"
+//               captionText="Интернет-магазин CosmoStore - +200% к продажам"
+//               containerHeight="500px"
+//               containerWidth="500px"
+//               imageHeight="500px"
+//               imageWidth="500px"
+//               rotateAmplitude={30}
+//               scaleOnHover={1.2}
+//               showMobileWarning={false}
+//               showTooltip={true}
+//               displayOverlayContent={true}
+//               overlayContent={
+//                 <div className="absolute top-2 bottom left-2 right bg-black/70 backdrop-blur-sm rounded-lg p-4">
+//                   <p className="text-white font-semibold text-lg">Интернет-магазин CosmoStore</p>
+//                   <p className="text-white/80 text-sm">+200% к продажам после запуска</p>
+//                 </div>
+//               }
+//             />
 //           </motion.div>
 //         </div>
 //       </div>
@@ -123,6 +116,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import TiltedCard from "./TiltedCard"
+import RotatingText from './RotatingText'
+import StarBorder from './StarBorder'
 
 export function Hero() {
   return (
@@ -170,35 +165,43 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
             >
-              Хотите <span className="text-primary">продающий сайт</span>?
+              Хотите{" "}
+              <span className="text-primary inline-block">
+                <RotatingText
+                  texts={['продающий', 'конверсионный', 'современный', 'эффективный']}
+                  mainClassName="px-3 text-primary overflow-hidden py-1 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={3000}
+                />
+              </span>{" "}
+              сайт?
             </motion.h1>
-
-            {/* <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl text-balance leading-relaxed"
-            >
-              Создаём современные сайты, которые не просто красивы, а реально приносят заявки и увеличивают продажи вашего бизнеса
-            </motion.p> */}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 items-center"
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 h-12">
                 Получить бесплатный аудит
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 h-12 border-primary/30 hover:bg-primary/10 bg-transparent"
-              >
-                Смотреть кейсы
-              </Button>
+              
+              <StarBorder
+  as="button"
+  className="custom-class"
+  color="#ff00eeff"
+  speed="5s"
+>
+  Посмотреть кейсы
+</StarBorder>
             </motion.div>
           </motion.div>
 
@@ -210,7 +213,7 @@ export function Hero() {
             className="flex items-center justify-center"
           >
             <TiltedCard
-              imageSrc="/corporate-website-modern-design-purple.jpg" // Замените на ваш путь к изображению
+              imageSrc="/corporate-website-modern-design-purple.jpg"
               altText="Пример продающего сайта"
               captionText="Интернет-магазин CosmoStore - +200% к продажам"
               containerHeight="500px"
@@ -224,8 +227,8 @@ export function Hero() {
               displayOverlayContent={true}
               overlayContent={
                 <div className="absolute top-2 bottom left-2 right bg-black/70 backdrop-blur-sm rounded-lg p-4">
-                  <p className="text-white font-semibold text-lg">Интернет-магазин CosmoStore</p>
-                  <p className="text-white/80 text-sm">+200% к продажам после запуска</p>
+                  <p className="text-white font-semibold text-xl text-center mb-2">Интернет-магазин CosmoStore</p>
+                  <p className="text-white/80 text-base text-center">+200% к продажам после запуска</p>
                 </div>
               }
             />
