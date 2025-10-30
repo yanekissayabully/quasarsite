@@ -6,6 +6,8 @@ import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
 import { Preloader } from "@/components/preloader"
 import { Header } from "@/components/header"
+import { HeroOffer } from "@/components/Offer"
+import ExplanationBlock from "@/components/ExplanationBlock"
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Preloader />
       <Header />
       <main className="relative overflow-hidden">
+        <HeroOffer />
+        <ExplanationBlock />
         <Hero />
         <Services />
         <Features />
