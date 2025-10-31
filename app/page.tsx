@@ -8,6 +8,7 @@ import { Preloader } from "@/components/preloader"
 import { Header } from "@/components/header"
 import { HeroOffer } from "@/components/Offer"
 import ExplanationBlock from "@/components/ExplanationBlock"
+import App from "@/components/Stacks"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <ExplanationBlock />
         <Hero />
         <Services />
+        < App />
         <Features />
         <Portfolio />
         <CTA />
