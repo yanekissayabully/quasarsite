@@ -238,20 +238,20 @@ export function HeroOffer() {
 
       <img
         ref={revealImgRef}
-        src="/path/to/image.jpg"
+        src="/booking-service-app-interface.jpg"
         alt="Reveal effect"
         style={{
           position: 'absolute',
           width: '100%',
           top: '-50%',
           zIndex: 5,
-          mixBlendMode: 'lighten',
+          mixBlendMode: 'soft-light',
           opacity: 0.3,
           pointerEvents: 'none',
           '--mx': '-9999px',
           '--my': '-9999px',
-          WebkitMaskImage: 'radial-gradient(circle at var(--mx) var(--my), rgba(255,255,255,1) 0px, rgba(255,255,255,0.95) 60px, rgba(255,255,255,0.6) 120px, rgba(255,255,255,0.25) 180px, rgba(255,255,255,0) 240px)',
-          maskImage: 'radial-gradient(circle at var(--mx) var(--my), rgba(255,255,255,1) 0px, rgba(255,255,255,0.95) 60px, rgba(255,255,255,0.6) 120px, rgba(255,255,255,0.25) 180px, rgba(255,255,255,0) 240px)',
+          WebkitMaskImage: 'radial-gradient(circle at var(--mx) var(--my), rgba(255, 8, 230, 1) 0px, rgba(255, 0, 170, 0.95) 60px, rgba(230, 0, 255, 0.6) 120px, rgba(181, 0, 242, 0.25) 180px, rgba(245, 0, 0, 0) 240px)',
+          maskImage: 'radial-gradient(circle at var(--mx) var(--my), rgba(235, 36, 149, 1) 0px, rgba(238, 10, 177, 0.95) 60px, rgba(172, 4, 238, 0.6) 120px, rgba(197, 7, 245, 0.25) 180px, rgba(255,255,255,0) 240px)',
           WebkitMaskRepeat: 'no-repeat',
           maskRepeat: 'no-repeat'
         }}
