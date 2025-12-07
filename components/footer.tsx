@@ -105,11 +105,11 @@ export function Footer() {
               </div>
             </div>
             
-            <div className="space-y-4 mb-6">
+            {/* <div className="space-y-4 mb-6">
               <p className="text-xl lg:text-2xl text-foreground font-medium leading-tight max-w-2xl">
                 Сайты для тех, кто делает <span className="text-accent font-bold">шум</span>, а не фон.
               </p>
-            </div>
+            </div> */}
 
             {/* Соцсети с улучшенным дизайном */}
             <div className="flex gap-4 mt-8">
