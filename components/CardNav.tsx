@@ -258,7 +258,7 @@
 
 
 
-
+"use client"
 
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';

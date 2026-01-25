@@ -39,7 +39,6 @@ export function CTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-              <MessageCircle className="mr-2" size={20} />
               Написать в Telegram
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -48,12 +47,11 @@ export function CTA() {
               variant="outline"
               className="text-lg px-8 border-primary/30 hover:bg-primary/10 bg-transparent"
             >
-              <Mail className="mr-2" size={20} />
-              Отправить Email
+              Оставить заявку
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {[
               { label: "Быстрый ответ", value: "< 2 часов" },
               { label: "Бесплатная консультация", value: "30 минут" },
@@ -71,7 +69,7 @@ export function CTA() {
                 <div className="text-sm text-muted-foreground">{item.label}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

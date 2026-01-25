@@ -175,7 +175,7 @@ function TechCapabilities() {
         {/* Статистика */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16">
           {[
-            { number: "50+", label: "Успешных проектов" },
+            { number: "150+", label: "Успешных проектов" },
             { number: "3+", label: "Года опыта" },
             { number: "98%", label: "Довольных клиентов" },
             { number: "24/7", label: "Техподдержка" }

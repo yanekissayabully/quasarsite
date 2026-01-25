@@ -344,7 +344,7 @@ export function Hero() {
             className="flex items-center justify-center mt-8 lg:mt-0"
           >
             <TiltedCard
-              imageSrc="/corporate-website-modern-design-purple.jpg"
+              imageSrc="/banner.png"
               altText="Пример продающего сайта"
               captionText="Интернет-магазин CosmoStore - +200% к продажам"
               containerHeight="clamp(300px, 60vw, 500px)"
@@ -359,7 +359,7 @@ export function Hero() {
               enableGyroscope={true}
               overlayContent={
                 <div className="absolute top-2 left-2 right-2 bg-black/70 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <p className="text-white font-semibold text-base md:text-xl text-center mb-1 md:mb-2">Интернет-магазин CosmoStore</p>
+                  <p className="text-white font-semibold text-base md:text-xl text-center mb-1 md:mb-2">Интернет-магазин SuleonAuto</p>
                   <p className="text-white/80 text-sm md:text-base text-center">+200% к продажам после запуска</p>
                 </div>
               }

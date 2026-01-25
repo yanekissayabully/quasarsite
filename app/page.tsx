@@ -1,6 +1,5 @@
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
-import { Features } from "@/components/features"
 import { Portfolio } from "@/components/portfolio"
 import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
@@ -9,6 +8,9 @@ import { Header } from "@/components/header"
 import { HeroOffer } from "@/components/Offer"
 import ExplanationBlock from "@/components/ExplanationBlock"
 import App from "@/components/Stacks"
+import Features from "@/components/features"
+import { HeroOff } from "@/components/heroOff"
+import { Offer } from "@/components/description"
 
 export default function Home() {
   return (
@@ -16,8 +18,10 @@ export default function Home() {
       <Preloader />
       <Header />
       <main className="relative overflow-hidden">
-        <HeroOffer />
-        <ExplanationBlock />
+        <HeroOff/>
+        <Offer />
+        {/* <HeroOffer /> */}
+        {/* <ExplanationBlock /> */}
         <Hero />
         <Services />
         < App />

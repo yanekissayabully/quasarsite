@@ -262,9 +262,163 @@
 
 
 
+// "use client"
+// import { useRef, useState, useEffect } from 'react';
+// import LaserFlow from './LaserFlow';
+// import FuzzyText from './FuzzyText';
+
+// export function HeroOffer() {
+//   const revealImgRef = useRef<HTMLImageElement>(null);
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   useEffect(() => {
+//     const checkMobile = () => {
+//       setIsMobile(window.innerWidth < 768);
+//     };
+    
+//     checkMobile();
+//     window.addEventListener('resize', checkMobile);
+    
+//     return () => window.removeEventListener('resize', checkMobile);
+//   }, []);
+
+//   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+//     if (isMobile) return;
+    
+//     const rect = e.currentTarget.getBoundingClientRect();
+//     const x = e.clientX - rect.left;
+//     const y = e.clientY - rect.top;
+//     const el = revealImgRef.current;
+//     if (el) {
+//       el.style.setProperty('--mx', `${x}px`);
+//       el.style.setProperty('--my', `${y + rect.height * 0.5}px`);
+//     }
+//   };
+
+//   const handleMouseLeave = () => {
+//     if (isMobile) return;
+    
+//     const el = revealImgRef.current;
+//     if (el) {
+//       el.style.setProperty('--mx', '-9999px');
+//       el.style.setProperty('--my', '-9999px');
+//     }
+//   };
+
+//   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+//     if (!isMobile) return;
+    
+//     const touch = e.touches[0];
+//     const rect = e.currentTarget.getBoundingClientRect();
+//     const x = touch.clientX - rect.left;
+//     const y = touch.clientY - rect.top;
+//     const el = revealImgRef.current;
+//     if (el) {
+//       el.style.setProperty('--mx', `${x}px`);
+//       el.style.setProperty('--my', `${y + rect.height * 0.5}px`);
+//     }
+//   };
+
+//   return (
+//     <div 
+//       style={{ 
+//         height: isMobile ? '600px' : '800px',
+//         minHeight: isMobile ? '500px' : '600px',
+//         position: 'relative', 
+//         overflow: 'hidden',
+//         backgroundColor: '#060010'
+//       }}
+//       onMouseMove={handleMouseMove}
+//       onMouseLeave={handleMouseLeave}
+//       onTouchMove={handleTouchMove}
+//       onTouchEnd={handleMouseLeave}
+//     >
+//       <LaserFlow
+//         horizontalBeamOffset={0.1}
+//         verticalBeamOffset={0.0}
+//         color="#FF79C6"
+//       />
+      
+//       <div style={{
+//         position: 'absolute',
+//         top: '50%',
+//         left: '50%',
+//         transform: isMobile ? 'translate(-50%, -50%)' : 'translateX(-50%)',
+//         width: isMobile ? '92%' : '86%',
+//         maxWidth: isMobile ? '500px' : 'none',
+//         height: isMobile ? 'auto' : '60%',
+//         minHeight: isMobile ? '300px' : 'auto',
+//         backgroundColor: '#060010',
+//         borderRadius: isMobile ? '16px' : '20px',
+//         border: isMobile ? '1.5px solid #FF79C6' : '2px solid #FF79C6',
+//         display: 'flex',
+//         alignItems: 'center',
+//         justifyContent: 'center',
+//         color: 'white',
+//         zIndex: 6,
+//         padding: isMobile ? '2rem 1rem' : '2rem'
+//       }}>
+//         <div style={{ 
+//           textAlign: 'center', 
+//           width: '100%'
+//         }}>
+//           <FuzzyText 
+//             baseIntensity={0.2} 
+//             hoverIntensity={0.5} 
+//             enableHover={true}
+//             fontSize={isMobile ? 'clamp(1.8rem, 10vw, 3rem)' : 'clamp(2.5rem, 6vw, 5rem)'}
+//             fontWeight={900}
+//             color="#FF79C6"
+//           >
+//             САЙТ ЗА 2 ДНЯ ?
+//           </FuzzyText>
+          
+//           {isMobile && (
+//             <p style={{
+//               marginTop: '1rem',
+//               fontSize: '0.875rem',
+//               color: '#FF79C6',
+//               opacity: 0.7
+//             }}>
+//               Проведите пальцем для эффекта
+//             </p>
+//           )}
+//         </div>
+//       </div>
+
+//       <img
+//         ref={revealImgRef}
+//         src="/booking-service-app-interface.jpg"
+//         alt="Reveal effect"
+//         style={{
+//           position: 'absolute',
+//           width: '100%',
+//           top: '-50%',
+//           zIndex: 5,
+//           mixBlendMode: 'soft-light',
+//           opacity: isMobile ? 0.25 : 0.3,
+//           pointerEvents: 'none',
+//           '--mx': '-9999px',
+//           '--my': '-9999px',
+//           WebkitMaskImage: isMobile 
+//             ? 'radial-gradient(circle at var(--mx) var(--my), rgba(255, 8, 230, 1) 0px, rgba(255, 0, 170, 0.95) 40px, rgba(230, 0, 255, 0.6) 80px, rgba(181, 0, 242, 0.25) 120px, rgba(245, 0, 0, 0) 160px)'
+//             : 'radial-gradient(circle at var(--mx) var(--my), rgba(255, 8, 230, 1) 0px, rgba(255, 0, 170, 0.95) 60px, rgba(230, 0, 255, 0.6) 120px, rgba(181, 0, 242, 0.25) 180px, rgba(245, 0, 0, 0) 240px)',
+//           maskImage: isMobile
+//             ? 'radial-gradient(circle at var(--mx) var(--my), rgba(235, 36, 149, 1) 0px, rgba(238, 10, 177, 0.95) 40px, rgba(172, 4, 238, 0.6) 80px, rgba(197, 7, 245, 0.25) 120px, rgba(255,255,255,0) 160px)'
+//             : 'radial-gradient(circle at var(--mx) var(--my), rgba(235, 36, 149, 1) 0px, rgba(238, 10, 177, 0.95) 60px, rgba(172, 4, 238, 0.6) 120px, rgba(197, 7, 245, 0.25) 180px, rgba(255,255,255,0) 240px)',
+//           WebkitMaskRepeat: 'no-repeat',
+//           maskRepeat: 'no-repeat'
+//         } as React.CSSProperties}
+//       />
+//     </div>
+//   );
+// }
+
+
+
 "use client"
 import { useRef, useState, useEffect } from 'react';
-import LaserFlow from './LaserFlow';
+import Galaxy from './Galaxy';
 import FuzzyText from './FuzzyText';
 
 export function HeroOffer() {
@@ -333,83 +487,38 @@ export function HeroOffer() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseLeave}
     >
-      <LaserFlow
-        horizontalBeamOffset={0.1}
-        verticalBeamOffset={0.0}
-        color="#FF79C6"
+      <Galaxy 
+        mouseRepulsion={true}
+        mouseInteraction={true}
+        density={isMobile ? 0.5 : 0.6}
+        glowIntensity={0.3}
+        saturation={0}
+        hueShift={300}
       />
       
+      {/* Убран блок с фоном, оставлен только текст */}
       <div style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: isMobile ? 'translate(-50%, -50%)' : 'translateX(-50%)',
-        width: isMobile ? '92%' : '86%',
-        maxWidth: isMobile ? '500px' : 'none',
-        height: isMobile ? 'auto' : '60%',
-        minHeight: isMobile ? '300px' : 'auto',
-        backgroundColor: '#060010',
-        borderRadius: isMobile ? '16px' : '20px',
-        border: isMobile ? '1.5px solid #FF79C6' : '2px solid #FF79C6',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
+        transform: 'translate(-50%, -50%)',
+        width: '100%',
+        textAlign: 'center',
         zIndex: 6,
-        padding: isMobile ? '2rem 1rem' : '2rem'
+        padding: isMobile ? '0 1rem' : '0 2rem'
       }}>
-        <div style={{ 
-          textAlign: 'center', 
-          width: '100%'
-        }}>
-          <FuzzyText 
-            baseIntensity={0.2} 
-            hoverIntensity={0.5} 
-            enableHover={true}
-            fontSize={isMobile ? 'clamp(1.8rem, 10vw, 3rem)' : 'clamp(2.5rem, 6vw, 5rem)'}
-            fontWeight={900}
-            color="#FF79C6"
-          >
-            САЙТ ЗА 2 ДНЯ ?
-          </FuzzyText>
-          
-          {isMobile && (
-            <p style={{
-              marginTop: '1rem',
-              fontSize: '0.875rem',
-              color: '#FF79C6',
-              opacity: 0.7
-            }}>
-              Проведите пальцем для эффекта
-            </p>
-          )}
-        </div>
+        <FuzzyText 
+          baseIntensity={0.2} 
+          hoverIntensity={0.5} 
+          enableHover={true}
+          fontSize={isMobile ? 'clamp(1.8rem, 10vw, 3rem)' : 'clamp(2.5rem, 6vw, 5rem)'}
+          fontWeight={900}
+          color="#ffffff"
+        >
+          САЙТ ЗА 2 ДНЯ ?
+        </FuzzyText>
       </div>
 
-      <img
-        ref={revealImgRef}
-        src="/booking-service-app-interface.jpg"
-        alt="Reveal effect"
-        style={{
-          position: 'absolute',
-          width: '100%',
-          top: '-50%',
-          zIndex: 5,
-          mixBlendMode: 'soft-light',
-          opacity: isMobile ? 0.25 : 0.3,
-          pointerEvents: 'none',
-          '--mx': '-9999px',
-          '--my': '-9999px',
-          WebkitMaskImage: isMobile 
-            ? 'radial-gradient(circle at var(--mx) var(--my), rgba(255, 8, 230, 1) 0px, rgba(255, 0, 170, 0.95) 40px, rgba(230, 0, 255, 0.6) 80px, rgba(181, 0, 242, 0.25) 120px, rgba(245, 0, 0, 0) 160px)'
-            : 'radial-gradient(circle at var(--mx) var(--my), rgba(255, 8, 230, 1) 0px, rgba(255, 0, 170, 0.95) 60px, rgba(230, 0, 255, 0.6) 120px, rgba(181, 0, 242, 0.25) 180px, rgba(245, 0, 0, 0) 240px)',
-          maskImage: isMobile
-            ? 'radial-gradient(circle at var(--mx) var(--my), rgba(235, 36, 149, 1) 0px, rgba(238, 10, 177, 0.95) 40px, rgba(172, 4, 238, 0.6) 80px, rgba(197, 7, 245, 0.25) 120px, rgba(255,255,255,0) 160px)'
-            : 'radial-gradient(circle at var(--mx) var(--my), rgba(235, 36, 149, 1) 0px, rgba(238, 10, 177, 0.95) 60px, rgba(172, 4, 238, 0.6) 120px, rgba(197, 7, 245, 0.25) 180px, rgba(255,255,255,0) 240px)',
-          WebkitMaskRepeat: 'no-repeat',
-          maskRepeat: 'no-repeat'
-        } as React.CSSProperties}
-      />
     </div>
   );
 }

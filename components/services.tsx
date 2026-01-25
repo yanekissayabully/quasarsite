@@ -924,7 +924,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/corporate-website-modern-design-purple.jpg')" }}
+                  style={{ backgroundImage: "url('/44.jpg')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
@@ -939,7 +939,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/telegram-mini-app-game-interface-purple.jpg')" }}
+                  style={{ backgroundImage: "url('/1.png')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
@@ -954,7 +954,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/ai-chatbot-interface-dark-theme.jpg')" }}
+                  style={{ backgroundImage: "url('/2.jpg')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
@@ -969,7 +969,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/modern-ecommerce-website-dark-purple-theme.jpg')" }}
+                  style={{ backgroundImage: "url('/3.jpg')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
@@ -984,7 +984,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/marketing-bot-dashboard-analytics.jpg')" }}
+                  style={{ backgroundImage: "url('/5.jpeg')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
@@ -999,7 +999,7 @@ export function Services() {
               <Card>
                 <div 
                   className="w-full h-full rounded-xl bg-cover bg-center relative overflow-hidden"
-                  style={{ backgroundImage: "url('/booking-service-app-interface.jpg')" }}
+                  style={{ backgroundImage: "url('/4.jpg')" }}
                 >
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="relative z-10 p-4 md:p-6 text-white h-full flex flex-col justify-end">
