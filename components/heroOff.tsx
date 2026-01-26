@@ -38,13 +38,13 @@ export function HeroOff() {
         <div className="max-w-4xl mx-auto text-center">
 
           <div className="mb-4 md:mb-6 px-2">
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex justify-center"
             >
-              <FuzzyText 
+              {/* <FuzzyText 
                 fontSize="clamp(2.5rem, 10vw, 8rem)"
                 fontWeight={900}
                 fontFamily="inherit"
@@ -54,46 +54,19 @@ export function HeroOff() {
                 hoverIntensity={0.3}
               >
                 Сайт за 2 дня?
+              </FuzzyText> */}
+               <FuzzyText 
+                fontSize="clamp(3.5rem, 12vw, 8rem)"
+                fontWeight={900}
+                fontFamily="inherit"
+                color="#fff"
+                enableHover={true}
+                baseIntensity={0.12}
+                hoverIntensity={0.3}
+              >
+                Сайт за 2 дня?
               </FuzzyText>
-            </motion.div> */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="flex justify-center"
->
-  <div className="relative">
-    {/* Для десктопов */}
-    <div className="hidden md:block">
-      <FuzzyText 
-        fontSize="clamp(3rem, 10vw, 8rem)"
-        fontWeight={900}
-        fontFamily="inherit"
-        color="#fff"
-        enableHover={true}
-        baseIntensity={0.12}
-        hoverIntensity={0.3}
-      >
-        Сайт за 2 дня?
-      </FuzzyText>
-    </div>
-    
-    {/* Для мобилок с увеличенным размером */}
-    <div className="block md:hidden">
-      <FuzzyText 
-        fontSize="clamp(4rem, 15vw, 8rem)"  // Больше на мобилках
-        fontWeight={900}
-        fontFamily="inherit"
-        color="#fff"
-        enableHover={false}  // Можно отключить hover на мобилках
-        baseIntensity={0.15}
-        hoverIntensity={0.3}
-      >
-        Сайт за 2 дня?
-      </FuzzyText>
-    </div>
-  </div>
-</motion.div>
+            </motion.div>
           </div>
 
         </div>
