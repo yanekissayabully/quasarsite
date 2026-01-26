@@ -876,7 +876,7 @@ export default function TiltedCard({
             onClick={handlePermissionRequest}
             className="bg-primary text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors shadow-lg"
           >
-            🎯 Включить 3D эффект
+            Включить 3D эффект
           </button>
         </div>
       )}
