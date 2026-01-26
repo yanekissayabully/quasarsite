@@ -180,7 +180,7 @@
 
 
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface FuzzyTextProps {
   children: React.ReactNode;
@@ -204,8 +204,15 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
   hoverIntensity = 0.5
 }) => {
   const canvasRef = useRef<HTMLCanvasElement & { cleanupFuzzyText?: () => void }>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     let animationFrameId: number;
     let isCancelled = false;
     const canvas = canvasRef.current;
@@ -223,21 +230,29 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
       const computedFontFamily =
         fontFamily === 'inherit' ? window.getComputedStyle(canvas).fontFamily || 'sans-serif' : fontFamily;
 
-      const fontSizeStr = typeof fontSize === 'number' ? `${fontSize}px` : fontSize;
+      // Вычисляем размер шрифта с учетом viewport
       let numericFontSize: number;
       if (typeof fontSize === 'number') {
         numericFontSize = fontSize;
       } else {
-        const temp = document.createElement('span');
+        // Создаем временный элемент для правильного вычисления размера
+        const temp = document.createElement('div');
         temp.style.fontSize = fontSize;
-        temp.style.position = 'absolute';
+        temp.style.position = 'fixed';
         temp.style.visibility = 'hidden';
-        temp.style.whiteSpace = 'nowrap';
+        temp.style.top = '-9999px';
+        temp.style.left = '-9999px';
         document.body.appendChild(temp);
+        
+        // Ждем следующий фрейм для правильного вычисления
+        await new Promise(resolve => requestAnimationFrame(resolve));
+        
         const computedSize = window.getComputedStyle(temp).fontSize;
         numericFontSize = parseFloat(computedSize);
         document.body.removeChild(temp);
       }
+
+      const fontSizeStr = `${numericFontSize}px`;
 
       const text = React.Children.toArray(children).join('');
 
@@ -356,7 +371,11 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
         canvas.cleanupFuzzyText();
       }
     };
-  }, [children, fontSize, fontWeight, fontFamily, color, enableHover, baseIntensity, hoverIntensity]);
+  }, [mounted, children, fontSize, fontWeight, fontFamily, color, enableHover, baseIntensity, hoverIntensity]);
+
+  if (!mounted) {
+    return <div style={{ minHeight: '100px' }} />;
+  }
 
   return <canvas ref={canvasRef} />;
 };

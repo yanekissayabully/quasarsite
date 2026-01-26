@@ -87,10 +87,30 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 import LightPillar from './LightPillar'
 import FuzzyText from "./FuzzyText"
 
 export function HeroOff() {
+  const [fontSize, setFontSize] = useState(128)
+
+  useEffect(() => {
+    const updateFontSize = () => {
+      const width = window.innerWidth
+      if (width < 640) {
+        setFontSize(64) // мобилки - 64px
+      } else if (width < 1024) {
+        setFontSize(96) // планшеты - 96px
+      } else {
+        setFontSize(128) // десктоп - 128px
+      }
+    }
+
+    updateFontSize()
+    window.addEventListener('resize', updateFontSize)
+    return () => window.removeEventListener('resize', updateFontSize)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-950 via-purple-950/30 to-gray-950">
       {/* Фоновые эффекты */}
@@ -131,7 +151,7 @@ export function HeroOff() {
               className="flex justify-center"
             >
               <FuzzyText 
-                fontSize="clamp(4rem, 15vw, 8rem)"
+                fontSize={fontSize}
                 fontWeight={900}
                 fontFamily="inherit"
                 color="#fff"
