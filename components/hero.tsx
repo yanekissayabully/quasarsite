@@ -241,6 +241,139 @@
 
 
 
+// "use client"
+
+// import { Button } from "@/components/ui/button"
+// import { ArrowRight } from "lucide-react"
+// import { motion } from "framer-motion"
+// import TiltedCard from "./TiltedCard"
+// import RotatingText from './RotatingText'
+// import StarBorder from './StarBorder'
+
+// export function Hero() {
+//   return (
+//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
+//       {/* Animated Background */}
+//       <div className="absolute inset-0 overflow-hidden">
+//         <motion.div
+//           animate={{
+//             scale: [1, 1.2, 1],
+//             opacity: [0.3, 0.5, 0.3],
+//           }}
+//           transition={{
+//             duration: 8,
+//             repeat: Number.POSITIVE_INFINITY,
+//             ease: "easeInOut",
+//           }}
+//           className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl"
+//         />
+//         <motion.div
+//           animate={{
+//             scale: [1.2, 1, 1.2],
+//             opacity: [0.2, 0.4, 0.2],
+//           }}
+//           transition={{
+//             duration: 10,
+//             repeat: Number.POSITIVE_INFINITY,
+//             ease: "easeInOut",
+//           }}
+//           className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-3xl"
+//         />
+//       </div>
+
+//       <div className="container mx-auto px-4 relative z-10">
+//         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+//           {/* Left Content */}
+//           <motion.div
+//             initial={{ opacity: 0, x: -20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.7 }}
+//             className="text-left"
+//           >
+//             <motion.h1
+//               initial={{ opacity: 0, y: 20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.7, delay: 0.1 }}
+//               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-balance leading-tight"
+//             >
+//               Хотите{" "}
+//               <span className="text-primary inline-block">
+//                 <RotatingText
+//                   texts={['продающий', 'конверсионный', 'современный', 'эффективный']}
+//                   mainClassName="px-2 md:px-3 text-primary overflow-hidden py-1 justify-center rounded-lg"
+//                   staggerFrom={"last"}
+//                   initial={{ y: "100%" }}
+//                   animate={{ y: 0 }}
+//                   exit={{ y: "-120%" }}
+//                   staggerDuration={0.025}
+//                   splitLevelClassName="overflow-hidden pb-1"
+//                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
+//                   rotationInterval={3000}
+//                 />
+//               </span>{" "}
+//               сайт?
+//             </motion.h1>
+
+//             <motion.div
+//               initial={{ opacity: 0, y: 20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.7, delay: 0.4 }}
+//               className="flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center"
+//             >
+//               <Button size="lg" className="bg-primary hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 h-11 md:h-12 w-full sm:w-auto">
+//                 Получить бесплатный аудит
+//                 <ArrowRight className="ml-2" size={18} />
+//               </Button>
+              
+//               <StarBorder
+//                 as="button"
+//                 className="w-full sm:w-auto"
+//                 color="#ff00eeff"
+//                 speed="5s"
+//               >
+//                 Посмотреть кейсы
+//               </StarBorder>
+//             </motion.div>
+//           </motion.div>
+
+//           {/* Right - TiltedCard */}
+//           <motion.div
+//             initial={{ opacity: 0, x: 20 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.7, delay: 0.2 }}
+//             className="flex items-center justify-center mt-8 lg:mt-0"
+//           >
+//             <TiltedCard
+//               imageSrc="/banner.png"
+//               altText="Пример продающего сайта"
+//               captionText="Интернет-магазин CosmoStore - +200% к продажам"
+//               containerHeight="clamp(300px, 60vw, 500px)"
+//               containerWidth="100%"
+//               imageHeight="clamp(300px, 60vw, 500px)"
+//               imageWidth="clamp(300px, 60vw, 500px)"
+//               rotateAmplitude={30}
+//               scaleOnHover={1.2}
+//               showMobileWarning={false}
+//               showTooltip={true}
+//               displayOverlayContent={true}
+//               enableGyroscope={true}
+//               overlayContent={
+//                 <div className="absolute top-2 left-2 right-2 bg-black/70 backdrop-blur-sm rounded-lg p-3 md:p-4">
+//                   <p className="text-white font-semibold text-base md:text-xl text-center mb-1 md:mb-2">Интернет-магазин SuleonAuto</p>
+//                   <p className="text-white/80 text-sm md:text-base text-center">+200% к продажам после запуска</p>
+//                 </div>
+//               }
+//             />
+//           </motion.div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+
+
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -262,7 +395,7 @@ export function Hero() {
           }}
           transition={{
             duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
+            repeat: Infinity,
             ease: "easeInOut",
           }}
           className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-3xl"
@@ -274,7 +407,7 @@ export function Hero() {
           }}
           transition={{
             duration: 10,
-            repeat: Number.POSITIVE_INFINITY,
+            repeat: Infinity,
             ease: "easeInOut",
           }}
           className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-accent/20 rounded-full blur-3xl"
@@ -282,89 +415,94 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-left"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-balance leading-tight"
-            >
-              Хотите{" "}
-              <span className="text-primary inline-block">
-                <RotatingText
-                  texts={['продающий', 'конверсионный', 'современный', 'эффективный']}
-                  mainClassName="px-2 md:px-3 text-primary overflow-hidden py-1 justify-center rounded-lg"
-                  staggerFrom={"last"}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
-                  staggerDuration={0.025}
-                  splitLevelClassName="overflow-hidden pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={3000}
-                />
-              </span>{" "}
-              сайт?
-            </motion.h1>
-
+        <div className="max-w-6xl mx-auto">
+          {/* Mobile: Card first, Content second */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* TiltedCard - First on mobile, second on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center"
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="flex items-center justify-center order-1 lg:order-2 w-full"
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 h-11 md:h-12 w-full sm:w-auto">
-                Получить бесплатный аудит
-                <ArrowRight className="ml-2" size={18} />
-              </Button>
-              
-              <StarBorder
-                as="button"
-                className="w-full sm:w-auto"
-                color="#ff00eeff"
-                speed="5s"
-              >
-                Посмотреть кейсы
-              </StarBorder>
+              <TiltedCard
+                imageSrc="/banner.png"
+                altText="Пример продающего сайта"
+                captionText="Интернет-магазин CosmoStore - +200% к продажам"
+                containerHeight="clamp(320px, 70vw, 500px)"
+                containerWidth="100%"
+                imageHeight="clamp(320px, 70vw, 500px)"
+                imageWidth="clamp(320px, 70vw, 500px)"
+                rotateAmplitude={25}
+                scaleOnHover={1.15}
+                showMobileWarning={true}
+                showTooltip={true}
+                displayOverlayContent={true}
+                enableGyroscope={true}
+                overlayContent={
+                  <div className="absolute top-2 left-2 right-2 bg-black/70 backdrop-blur-sm rounded-lg p-3 md:p-4">
+                    <p className="text-white font-semibold text-base md:text-xl text-center mb-1 md:mb-2">Интернет-магазин SuleonAuto</p>
+                    <p className="text-white/80 text-sm md:text-base text-center">+200% к продажам после запуска</p>
+                  </div>
+                }
+              />
             </motion.div>
-          </motion.div>
 
-          {/* Right - TiltedCard */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex items-center justify-center mt-8 lg:mt-0"
-          >
-            <TiltedCard
-              imageSrc="/banner.png"
-              altText="Пример продающего сайта"
-              captionText="Интернет-магазин CosmoStore - +200% к продажам"
-              containerHeight="clamp(300px, 60vw, 500px)"
-              containerWidth="100%"
-              imageHeight="clamp(300px, 60vw, 500px)"
-              imageWidth="clamp(300px, 60vw, 500px)"
-              rotateAmplitude={30}
-              scaleOnHover={1.2}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={true}
-              enableGyroscope={true}
-              overlayContent={
-                <div className="absolute top-2 left-2 right-2 bg-black/70 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <p className="text-white font-semibold text-base md:text-xl text-center mb-1 md:mb-2">Интернет-магазин SuleonAuto</p>
-                  <p className="text-white/80 text-sm md:text-base text-center">+200% к продажам после запуска</p>
-                </div>
-              }
-            />
-          </motion.div>
+            {/* Content - Second on mobile, first on desktop */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-left order-2 lg:order-1"
+            >
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-balance leading-tight"
+              >
+                Хотите{" "}
+                <span className="text-primary inline-block">
+                  <RotatingText
+                    texts={['продающий', 'конверсионный', 'современный', 'эффективный']}
+                    mainClassName="px-2 md:px-3 text-primary overflow-hidden py-1 justify-center rounded-lg"
+                    staggerFrom={"last"}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    exit={{ y: "-120%" }}
+                    staggerDuration={0.025}
+                    splitLevelClassName="overflow-hidden pb-1"
+                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                    rotationInterval={3000}
+                  />
+                </span>{" "}
+                сайт?
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center"
+              >
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 h-11 md:h-12 w-full sm:w-auto">
+                  Получить бесплатный аудит
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+                
+                <StarBorder
+                  as="button"
+                  className="w-full sm:w-auto"
+                  color="#ff00eeff"
+                  speed="5s"
+                >
+                  Посмотреть кейсы
+                </StarBorder>
+              </motion.div>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </section>
