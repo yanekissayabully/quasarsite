@@ -98,9 +98,9 @@ export function HeroOff() {
     const updateFontSize = () => {
       const width = window.innerWidth
       if (width < 640) {
-        setFontSize(64) // мобилки - 64px
+        setFontSize(48) // мобилки - 48px
       } else if (width < 1024) {
-        setFontSize(96) // планшеты - 96px
+        setFontSize(72) // планшеты - 72px
       } else {
         setFontSize(128) // десктоп - 128px
       }
