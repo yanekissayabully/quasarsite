@@ -195,9 +195,6 @@ export function Footer() {
 
         {/* Нижняя часть */}
         <div className="border-t border-border/50 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-sm text-muted-foreground">
-          <div className="flex items-center gap-4">
-            <p>© {currentYear} QUASAR. Все права защищены.</p>
-          </div>
           <div className="flex gap-6">
             {["Политика конфиденциальности", "Условия использования"].map((item, index) => (
               <a 
@@ -209,6 +206,9 @@ export function Footer() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
+          </div>
+          <div className="flex items-center gap-4">
+            <p>© {currentYear} QUASAR. Все права защищены.</p>
           </div>
         </div>
       </div>

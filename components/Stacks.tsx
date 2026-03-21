@@ -40,20 +40,16 @@
 
 // function TechCapabilities() {
 //   return (
-//     <section className="mt-20 py-10 bg-gradient-to-b from-background to-background/80 relative overflow-hidden">
-//       {/* Декоративные элементы */}      
+//     <section className="mt-12 md:mt-20 py-8 md:py-10 bg-gradient-to-b from-background to-background/80 relative overflow-hidden">
 //       <div className="container mx-auto px-4 relative z-10">
-//         <div className="mb-16">
-//           <div className="text-center mb-8">
-//             <h3 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3">
+//         <div className="mb-12 md:mb-16">
+//           <div className="text-center mb-6 md:mb-8">
+//             <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 flex items-center justify-center gap-3">
 //               Технологии которые мы используем
 //             </h3>
-//             <p className="text-muted-foreground">
-//               Современный стек для максимальной производительности
-//             </p>
 //           </div>
           
-//           <div className="relative bg-background/50  p-8 backdrop-blur-sm">
+//           <div className="relative bg-background/50 p-4 md:p-8 backdrop-blur-sm rounded-xl">
 //             <LogoLoop
 //               logos={techLogos}
 //               speed={30}
@@ -63,7 +59,7 @@
 //               pauseOnHover={true}
 //               scaleOnHover={true}
 //               fadeOut={true}
-//               fadeOutColor="#000000ff"
+//               fadeOutColor="rgba(0, 0, 0, 0)"
 //               ariaLabel="Technology stack"
 //               className="py-4"
 //             />
@@ -71,16 +67,23 @@
 //         </div>
 
 //         {/* Статистика */}
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+//         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16">
 //           {[
-//             { number: "50+", label: "Успешных проектов" },
-//             { number: "3+", label: "Лет опыта" },
+//             { number: "150+", label: "Успешных проектов" },
+//             { number: "3+", label: "Года опыта" },
 //             { number: "98%", label: "Довольных клиентов" },
 //             { number: "24/7", label: "Техподдержка" }
 //           ].map((stat, index) => (
-//             <div key={index} className="text-center p-6 bg-background/50 border border-border rounded-xl">
-//               <div className="text-3xl font-bold text-accent mb-2">{stat.number}</div>
-//               <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+//             <div 
+//               key={index} 
+//               className="text-center p-4 md:p-6 bg-background/50 backdrop-blur-sm rounded-xl hover:bg-background/70 transition-colors duration-300"
+//             >
+//               <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">
+//                 {stat.number}
+//               </div>
+//               <div className="text-xs md:text-sm text-muted-foreground font-medium">
+//                 {stat.label}
+//               </div>
 //             </div>
 //           ))}
 //         </div>
@@ -102,6 +105,7 @@
 
 
 "use client"
+import { useEffect, useRef, useState } from 'react';
 import LogoLoop from './LogoLoop';
 import { 
   SiReact, 
@@ -140,6 +144,62 @@ const techLogos = [
   { node: <SiStorybook className="text-pink-500" />, title: "Storybook", href: "https://storybook.js.org" },
 ];
 
+// Компонент счетчика
+function AnimatedCounter({ targetValue, suffix = "", duration = 2000 }: { targetValue: number, suffix?: string, duration?: number }) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          let startTime: number | null = null;
+          const startValue = 0;
+          const endValue = targetValue;
+
+          const animateCount = (currentTime: number) => {
+            if (startTime === null) startTime = currentTime;
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Используем easing function для плавности
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentCount = Math.floor(startValue + (endValue - startValue) * easeOutQuart);
+            
+            setCount(currentCount);
+            
+            if (progress < 1) {
+              requestAnimationFrame(animateCount);
+            } else {
+              setCount(endValue);
+            }
+          };
+          
+          requestAnimationFrame(animateCount);
+        }
+      },
+      { threshold: 0.3 } // Запускаем когда элемент виден на 30%
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, [targetValue, duration, hasAnimated]);
+
+  return (
+    <div ref={counterRef} className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">
+      {count}{suffix}
+    </div>
+  );
+}
 
 function TechCapabilities() {
   return (
@@ -150,9 +210,6 @@ function TechCapabilities() {
             <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 flex items-center justify-center gap-3">
               Технологии которые мы используем
             </h3>
-            <p className="text-sm md:text-base text-muted-foreground px-4">
-              Современный стек для максимальной производительности
-            </p>
           </div>
           
           <div className="relative bg-background/50 p-4 md:p-8 backdrop-blur-sm rounded-xl">
@@ -175,18 +232,26 @@ function TechCapabilities() {
         {/* Статистика */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16">
           {[
-            { number: "150+", label: "Успешных проектов" },
-            { number: "3+", label: "Года опыта" },
-            { number: "98%", label: "Довольных клиентов" },
-            { number: "24/7", label: "Техподдержка" }
+            { number: 150, label: "Успешных проектов", suffix: "+", isAnimated: true },
+            { number: 3, label: "Года опыта", suffix: "+", isAnimated: true },
+            { number: 98, label: "Довольных клиентов", suffix: "%", isAnimated: true },
+            { number: null, label: "Техподдержка", value: "24/7", isAnimated: false }
           ].map((stat, index) => (
             <div 
               key={index} 
               className="text-center p-4 md:p-6 bg-background/50 backdrop-blur-sm rounded-xl hover:bg-background/70 transition-colors duration-300"
             >
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">
-                {stat.number}
-              </div>
+              {stat.isAnimated ? (
+                <AnimatedCounter 
+                  targetValue={stat.number as number} 
+                  suffix={stat.suffix as string}
+                  duration={2000}
+                />
+              ) : (
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">
+                  {stat.value}
+                </div>
+              )}
               <div className="text-xs md:text-sm text-muted-foreground font-medium">
                 {stat.label}
               </div>

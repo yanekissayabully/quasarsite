@@ -171,7 +171,7 @@ export function Offer() {
             className="group"
           >
             <p className="text-xl text-gray-300 leading-relaxed">
-              Вам не показалось. Мы действительно создаём полноценные сайты всего за{" "}
+              Вам не показалось. Мы действительно создаём полноценные лендинги всего за{" "}
               <motion.span 
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -189,7 +189,7 @@ export function Offer() {
                 transition={{ delay: 0.4, type: "spring" }}
                 className="inline-block text-pink-400 font-semibold px-1"
               >
-                40 000 тенге
+                100 000 тенге
               </motion.span>
               .
             </p>
@@ -298,7 +298,7 @@ export function Offer() {
           </motion.ul>
 
           {/* Заголовок "А подвох где?" */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, rotateX: 90 }}
             whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
@@ -307,10 +307,10 @@ export function Offer() {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
               А подвох где?
             </h3>
-          </motion.div>
+          </motion.div> */}
 
           {/* Текст с анимацией волны */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -323,10 +323,10 @@ export function Offer() {
             <p>
               Это позволяет нам делать качественные сайты быстро и недорого.
             </p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Цитата с особой анимацией */}
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
@@ -346,7 +346,7 @@ export function Offer() {
                 Мы не обещаем золотые горы. Мы делаем работающие сайты, которые приносят клиентов. Быстро и за разумные деньги.
               </motion.p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Последний абзац с анимацией типапечатки */}
           <motion.div
@@ -384,7 +384,7 @@ export function Offer() {
                   transition={{ delay: 1.2 }}
                   className="relative z-10 flex items-center justify-center"
                 >
-                  Заказать сайт за 40 000 ₸
+                  Заказать сайт
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </motion.span>
                 
