@@ -452,12 +452,12 @@ const CardNav: React.FC<CardNavProps> = ({
             </div>
           </div>
 
-<button
-  type="button"
+<a
+  href="#contact"
   className="card-nav-cta-button hidden md:inline-flex items-center justify-center border-0 rounded-xl px-6 h-12 font-medium cursor-pointer transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
 >
   Начать проект
-</button>
+</a>
         </div>
 
         <div

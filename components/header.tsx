@@ -20,8 +20,9 @@ export function Header() {
       bgColor: "rgba(255, 255, 255, 0.1)",
       textColor: "#fff",
       links: [
-        { label: "Веб-разработка", href: "#web", ariaLabel: "Веб-разработка" },
-        { label: "Дизайн", href: "#design", ariaLabel: "Дизайн" }
+        { label: "Возможности", href: "#possibilities", ariaLabel: "Возможности" },
+        { label: "Технологии", href: "#stack", ariaLabel: "Технологии" },
+        { label: "Услуги", href: "#services", ariaLabel: "Услуги" }
       ]
     },
     {
@@ -30,7 +31,6 @@ export function Header() {
       textColor: "#fff",
       links: [
         { label: "Портфолио", href: "#portfolio", ariaLabel: "Портфолио" },
-        { label: "Кейсы", href: "#cases", ariaLabel: "Кейсы" }
       ]
     },
     {
@@ -38,9 +38,9 @@ export function Header() {
       bgColor: "rgba(255, 255, 255, 0.1)", 
       textColor: "#fff",
       links: [
-        { label: "Email", href: "mailto:info@quasar.ru", ariaLabel: "Написать на email" },
-        { label: "Telegram", href: "#telegram", ariaLabel: "Telegram" },
-        { label: "WhatsApp", href: "#whatsapp", ariaLabel: "WhatsApp" }
+        { label: "Email", href: "mailto:aripov.cr7@gmail.com", ariaLabel: "Написать на email" },
+        { label: "Telegram", href: "https://t.me/prettyxuetty", ariaLabel: "Telegram" },
+        { label: "WhatsApp", href: "https://wa.me/77083907635", ariaLabel: "WhatsApp" }
       ]
     }
   ];

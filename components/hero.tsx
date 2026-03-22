@@ -622,19 +622,32 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center"
               >
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 h-11 md:h-12 w-full sm:w-auto">
-                  Получить бесплатный аудит
-                  <ArrowRight className="ml-2" size={18} />
-                </Button>
+                <Button
+  size="lg"
+  onClick={() => {
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }}
+  className="bg-primary hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 h-11 md:h-12 w-full sm:w-auto"
+>
+  Получить бесплатный аудит
+  <ArrowRight className="ml-2" size={18} />
+</Button>
                 
                 <StarBorder
-                  as="button"
-                  className="w-full sm:w-auto"
-                  color="#ff00eeff"
-                  speed="5s"
-                >
-                  Посмотреть кейсы
-                </StarBorder>
+  as="button"
+  onClick={() => {
+    document.getElementById('portfolio')?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }}
+  className="w-full sm:w-auto"
+  color="#ff00eeff"
+  speed="5s"
+>
+  Посмотреть кейсы
+</StarBorder>
               </motion.div>
             </motion.div>
 

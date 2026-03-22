@@ -447,6 +447,7 @@ function ServiceRow({ item, delay = 0 }: { item: ServiceItem; delay?: number }) 
 
   return (
     <motion.div
+      id="services"
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -562,10 +563,13 @@ function ServiceRow({ item, delay = 0 }: { item: ServiceItem; delay?: number }) 
 
               {/* Order button */}
               <div className="flex items-end shrink-0">
-                <button className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold tracking-wide flex items-center gap-2 hover:opacity-90 transition-opacity group/btn whitespace-nowrap rounded-xl">
-                  Заказать
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                </button>
+<a
+  href="#contact"
+  className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold tracking-wide flex items-center gap-2 hover:opacity-90 transition-opacity group/btn whitespace-nowrap rounded-xl"
+>
+  Заказать
+  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+</a>
               </div>
             </div>
           </div>
@@ -741,10 +745,13 @@ export function ServicesCatalog() {
       <p className="text-sm text-primary-foreground/70 leading-relaxed">
         Не нашли подходящее решение? Разработаем индивидуальное предложение под ваши задачи.
       </p>
-      <button className="self-start flex items-center gap-2 px-8 py-4 bg-primary-foreground text-primary text-sm font-bold tracking-wide hover:opacity-90 transition-opacity group rounded-xl">
-        Получить консультацию
-        <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </button>
+<a
+  href="#contact"
+  className="self-start flex items-center gap-2 px-8 py-4 bg-primary-foreground text-primary text-sm font-bold tracking-wide hover:opacity-90 transition-opacity group rounded-xl"
+>
+  Получить консультацию
+  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+</a>
     </div>
   </div>
 </motion.div>

@@ -148,7 +148,7 @@ import CardSwap, { Card } from './CardSwap'
 
 export function Services() {
   return (
-    <section id="services" className="py-16 md:py-20 lg:py-24">
+    <section id="possibilities" className="py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4">
         {/* Заголовок и карточки в одной строке */}
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
