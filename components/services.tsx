@@ -162,7 +162,7 @@ export function Services() {
               className="text-center lg:text-left"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-                Наши <span className="text-primary">услуги</span>
+                Что мы <span className="text-primary">умеем?</span>
               </h2>
               <p className="text-base md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Полный цикл разработки - от идеи до запуска и поддержки

@@ -11,6 +11,7 @@ import App from "@/components/Stacks"
 import Features from "@/components/features"
 import { HeroOff } from "@/components/heroOff"
 import { Offer } from "@/components/description"
+import {ServicesCatalog} from "@/components/ServiceCard"
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
         <Hero />
         <Services />
         < App />
-        <Features />
+        {/* <Features /> */}
+        <ServicesCatalog />
         <Portfolio />
         <CTA />
       </main>

@@ -18,7 +18,7 @@ export function CTA() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-3xl"
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-background rounded-full blur-3xl"
         />
       </div>
 

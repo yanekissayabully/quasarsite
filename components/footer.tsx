@@ -86,7 +86,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border bg-gradient-to-b from-card to-card/80 relative overflow-hidden">
+    // <footer className="border-t border-border bg-gradient-to-b from-card to-card/80 relative overflow-hidden">
+    <footer className="border-t border-border bg-background relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
       <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/5 rounded-full blur-3xl"></div>
