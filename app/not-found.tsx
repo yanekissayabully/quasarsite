@@ -95,7 +95,7 @@ export default function NotFoundPage() {
           </div>
 
           {/* Заголовок и текст */}
-          <motion.h2 
+          {/* <motion.h2 
             className="text-3xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -114,7 +114,7 @@ export default function NotFoundPage() {
             transition={{ delay: 0.7 }}
           >
             Вот просто...
-          </motion.p>
+          </motion.p> */}
 
           {/* Кнопки действий */}
           <motion.div 
