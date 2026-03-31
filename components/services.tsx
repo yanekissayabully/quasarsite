@@ -161,7 +161,7 @@ export function Services() {
               viewport={{ once: true }}
               className="text-center lg:text-left"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 md:mb-6">
                 Что мы <span className="text-primary">умеем?</span>
               </h2>
               <p className="text-base md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
@@ -194,7 +194,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Code className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">Сайты</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Сайты</h3>
                       <p className="text-sm md:text-base">Современные и быстрые веб-сайты</p>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Smartphone className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">Telegram Apps</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Telegram Apps</h3>
                       <p className="text-sm md:text-base">Мини-приложения для Telegram</p>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Bot className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">Telegram боты</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Telegram боты</h3>
                       <p className="text-sm md:text-base">Автоматизация бизнес-процессов</p>
                     </div>
                   </div>
@@ -245,7 +245,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Palette className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">UI/UX Дизайн</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">UI/UX Дизайн</h3>
                       <p className="text-sm md:text-base">Красивые и удобные интерфейсы</p>
                     </div>
                   </div>
@@ -262,7 +262,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Zap className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">Оптимизация</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Оптимизация</h3>
                       <p className="text-sm md:text-base">Ускорение и SEO-продвижение</p>
                     </div>
                   </div>
@@ -279,7 +279,7 @@ export function Services() {
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Shield className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">Поддержка</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Поддержка</h3>
                       <p className="text-sm md:text-base">Техническая поддержка проектов</p>
                     </div>
                   </div>

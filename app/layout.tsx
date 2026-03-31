@@ -1,11 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Syne } from "next/font/google"
 // import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+})
+
+const syne = Syne({ 
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
+})
 
 export const metadata: Metadata = {
   title: "QUASAR | Разработка сайтов, Telegram Mini Apps и ботов",
@@ -32,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`font-sans antialiased`}>
+      <body className={`${inter.variable} ${syne.variable} antialiased`}>
         {children}
         {/* <SplashCursor /> */}
         {/* <Analytics /> */}

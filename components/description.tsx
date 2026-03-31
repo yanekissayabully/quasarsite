@@ -1008,7 +1008,7 @@ export function Offer() {
             className="rounded-2xl border border-border bg-card p-8 md:p-10 space-y-8"
           >
             {/* Intro */}
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg font-sans text-muted-foreground leading-relaxed">
               Вам не показалось. Мы действительно создаём полноценные лендинги всего за{" "}
               <span className="text-primary font-semibold">2 рабочих дня</span>{" "}
               по фиксированной цене в{" "}
@@ -1026,8 +1026,8 @@ export function Offer() {
                 Как это возможно?
               </h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>Мы разработали уникальную систему экспресс-разработки. У нас есть готовые, проверенные решения и компоненты, которые мы адаптируем под ваш бизнес.</p>
-                <p>Не нужно изобретать велосипед — мы берём лучшие практики и применяем их для вашего проекта.</p>
+<p className="font-sans">Мы разработали уникальную систему экспресс-разработки. У нас есть готовые, проверенные решения и компоненты, которые мы адаптируем под ваш бизнес.</p>
+<p className="font-sans">Не нужно изобретать велосипед — мы берём лучшие практики и применяем их для вашего проекта.</p>
               </div>
             </div>
 
@@ -1065,7 +1065,7 @@ export function Offer() {
             <Divider />
 
             {/* Нижний текст */}
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="font-sans text-muted-foreground leading-relaxed">
               Этот тариф идеально подходит для малого бизнеса, стартапов, специалистов и предпринимателей, которым нужен работающий сайт{" "}
               <span className="text-foreground font-medium">«вчера»</span>, но бюджет ограничен.
             </p>

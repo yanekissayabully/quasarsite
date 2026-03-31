@@ -487,8 +487,7 @@ function TechCapabilities() {
             Технологический стек
           </span>
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance"
-            style={{ fontFamily: 'var(--font-syne)' }}
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-balance"
           >
             Работаем на{' '}
             <span className="text-primary">современном стеке</span>

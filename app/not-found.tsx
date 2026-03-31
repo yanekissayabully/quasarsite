@@ -53,7 +53,7 @@ export default function NotFoundPage() {
           {/* Анимированное число 404 */}
           <div className="relative mb-8">
             <motion.h1 
-              className="text-9xl md:text-[12rem] font-black bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
+              className="text-9xl md:text-[12rem] font-display font-black bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
@@ -218,10 +218,10 @@ export function NotFoundPageWithLocalVideo() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-8xl md:text-[10rem] font-black mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-8xl md:text-[10rem] font-display font-black mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             404
           </h1>
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-display font-bold mb-6">
             Потерялись в космосе?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-md mx-auto">

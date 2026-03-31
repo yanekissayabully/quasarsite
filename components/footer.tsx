@@ -282,7 +282,7 @@ export function Footer() {
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="relative">
-                <span className="text-5xl lg:text-6xl font-black relative bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                <span className="text-5xl lg:text-6xl font-display font-black relative bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                   QUASAR
                 </span>
               </div>
@@ -329,7 +329,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-foreground">Компания</h3>
+            <h3 className="text-lg font-display font-semibold mb-6 text-foreground">Компания</h3>
             <ul className="space-y-3 text-muted-foreground">
               {navLinks.map((item, index) => (
                 <li key={index}>
@@ -348,7 +348,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-foreground">Услуги</h3>
+            <h3 className="text-lg font-display font-semibold mb-6 text-foreground">Услуги</h3>
             <ul className="space-y-3 text-muted-foreground">
               {services.map((service, index) => (
                 <li key={index}>
