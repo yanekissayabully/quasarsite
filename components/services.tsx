@@ -187,7 +187,7 @@ export function Services() {
                 <Card>
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
-                      src="/44.jpg" 
+                      src="/42.jpg" 
                       alt="Сайты" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -204,7 +204,7 @@ export function Services() {
                 <Card>
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
-                      src="/1.png" 
+                      src="/mi.jpg" 
                       alt="Telegram Apps" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -221,14 +221,14 @@ export function Services() {
                 <Card>
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
-                      src="/2.jpg" 
-                      alt="Telegram боты" 
+                      src="/bb.jpg" 
+                      alt="Telegram bots" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Bot className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Telegram боты</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">AI Agents</h3>
                       <p className="text-sm md:text-base">Автоматизация бизнес-процессов</p>
                     </div>
                   </div>
@@ -238,14 +238,14 @@ export function Services() {
                 <Card>
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
-                      src="/3.jpg" 
-                      alt="UI/UX Дизайн" 
+                      src="/act.jpg" 
+                      alt="UI/UX Design" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Palette className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">UI/UX Дизайн</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">UI/UX Design</h3>
                       <p className="text-sm md:text-base">Красивые и удобные интерфейсы</p>
                     </div>
                   </div>
@@ -256,13 +256,13 @@ export function Services() {
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
                       src="/5.jpeg" 
-                      alt="Оптимизация" 
+                      alt="SEO Optimization" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Zap className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Оптимизация</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">SEO</h3>
                       <p className="text-sm md:text-base">Ускорение и SEO-продвижение</p>
                     </div>
                   </div>
@@ -272,14 +272,14 @@ export function Services() {
                 <Card>
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
                     <img 
-                      src="/4.jpg" 
+                      src="/41.jpg" 
                       alt="Поддержка" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
                     <div className="relative z-10 p-6 text-white h-full flex flex-col justify-end">
                       <Shield className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Поддержка</h3>
+                      <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Support</h3>
                       <p className="text-sm md:text-base">Техническая поддержка проектов</p>
                     </div>
                   </div>

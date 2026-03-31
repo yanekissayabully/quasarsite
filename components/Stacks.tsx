@@ -386,22 +386,75 @@ import {
 import { motion, useInView } from 'framer-motion';
 
 // Логотипы технологий с иконками
+// const techLogos = [
+//   { node: <SiReact className="text-[#61DAFB]" />, title: "React", href: "https://react.dev" },
+//   { node: <SiNextdotjs className="text-foreground" />, title: "Next.js", href: "https://nextjs.org" },
+//   { node: <SiTypescript className="text-[#3178C6]" />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+//   { node: <SiTailwindcss className="text-[#06B6D4]" />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+//   { node: <SiNodedotjs className="text-[#339933]" />, title: "Node.js", href: "https://nodejs.org" },
+//   { node: <SiFigma className="text-[#F24E1E]" />, title: "Figma", href: "https://figma.com" },
+//   { node: <SiVercel className="text-foreground" />, title: "Vercel", href: "https://vercel.com" },
+//   { node: <SiGit className="text-[#F05032]" />, title: "Git", href: "https://git-scm.com" },
+//   { node: <SiMongodb className="text-[#47A248]" />, title: "MongoDB", href: "https://mongodb.com" },
+//   { node: <SiPostgresql className="text-[#4169E1]" />, title: "PostgreSQL", href: "https://postgresql.org" },
+//   { node: <SiDocker className="text-[#2496ED]" />, title: "Docker", href: "https://docker.com" },
+//   { node: <SiGraphql className="text-[#E10098]" />, title: "GraphQL", href: "https://graphql.org" },
+//   { node: <SiJest className="text-[#C21325]" />, title: "Jest", href: "https://jestjs.io" },
+//   { node: <SiCypress className="text-[#69D3A7]" />, title: "Cypress", href: "https://cypress.io" },
+//   { node: <SiStorybook className="text-[#FF4785]" />, title: "Storybook", href: "https://storybook.js.org" },
+// ];
+
 const techLogos = [
-  { node: <SiReact className="text-[#61DAFB]" />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs className="text-foreground" />, title: "Next.js", href: "https://nextjs.org" },
-  { node: <SiTypescript className="text-[#3178C6]" />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-  { node: <SiTailwindcss className="text-[#06B6D4]" />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-  { node: <SiNodedotjs className="text-[#339933]" />, title: "Node.js", href: "https://nodejs.org" },
-  { node: <SiFigma className="text-[#F24E1E]" />, title: "Figma", href: "https://figma.com" },
-  { node: <SiVercel className="text-foreground" />, title: "Vercel", href: "https://vercel.com" },
-  { node: <SiGit className="text-[#F05032]" />, title: "Git", href: "https://git-scm.com" },
-  { node: <SiMongodb className="text-[#47A248]" />, title: "MongoDB", href: "https://mongodb.com" },
-  { node: <SiPostgresql className="text-[#4169E1]" />, title: "PostgreSQL", href: "https://postgresql.org" },
-  { node: <SiDocker className="text-[#2496ED]" />, title: "Docker", href: "https://docker.com" },
-  { node: <SiGraphql className="text-[#E10098]" />, title: "GraphQL", href: "https://graphql.org" },
-  { node: <SiJest className="text-[#C21325]" />, title: "Jest", href: "https://jestjs.io" },
-  { node: <SiCypress className="text-[#69D3A7]" />, title: "Cypress", href: "https://cypress.io" },
-  { node: <SiStorybook className="text-[#FF4785]" />, title: "Storybook", href: "https://storybook.js.org" },
+  { 
+    node: <img src="https://crmbolat.kz/favicon.ico" alt="Client 1" className="w-12 h-12 object-contain" />, 
+    title: "Bolat & Co.", 
+    href: "https://crmbolat.kz/" 
+  },
+  { 
+    node: <img src="https://tmfranchise.com/logo-tmbp.png" alt="Client 2" className="w-12 h-12 object-contain" />, 
+    title: "TM Barbershop", 
+    href: "https://tmfranchise.com/" 
+  },
+  { 
+    node: <img src="https://www.leka-beauty.kz/logo/LB.svg" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Leka Beauty", 
+    href: "https://www.leka-beauty.kz/" 
+  },
+  { 
+    node: <img src="https://royalflowers.kz/mainLogo.svg" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Royal Flowers", 
+    href: "https://royalflowers.kz/" 
+  },
+  { 
+    node: <img src="https://www.suleon.kz/icons/LOGOO.svg" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Suleon Auto", 
+    href: "https://www.suleon.kz/" 
+  },
+  { 
+    node: <img src="https://www.emisco.ch/assets/icons/logo.webp" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Emisco CH", 
+    href: "https://www.emisco.ch/" 
+  },
+  { 
+    node: <img src="https://static.tildacdn.pro/tild3762-3165-4938-b636-343837353938/Group_1321317857.png" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Merhat Jewelry", 
+    href: "https://merhatjewelry.com/" 
+  },
+  { 
+    node: <img src="https://static.insales-cdn.com/files/1/4265/111931561/original/LOGO.png" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Qazaq Soul", 
+    href: "https://qazaqsoul.kz/collection/all" 
+  },
+  { 
+    node: <img src="https://sylvie.kz/logo.jpg" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Sylvie Flowers", 
+    href: "https://sylvie.kz/" 
+  },
+  { 
+    node: <img src="https://static.tildacdn.pro/tild6133-3436-4562-b334-393363636639/logo.png" alt="Client 3" className="w-12 h-12 object-contain" />, 
+    title: "Compofffff", 
+    href: "https://compofffff.tilda.ws/" 
+  },
 ];
 
 // Компонент счетчика
@@ -484,13 +537,13 @@ function TechCapabilities() {
           className="text-center mb-16"
         >
           <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-4 block">
-            Технологический стек
+            Нам доверяют
           </span>
           <h2 
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-balance"
           >
-            Работаем на{' '}
-            <span className="text-primary">современном стеке</span>
+            Работаем с{' '}
+            <span className="text-primary">крупными брендами</span>
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}
