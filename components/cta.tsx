@@ -329,7 +329,7 @@ export function CTA() {
     }
 
     try {
-      const response = await fetch('/send-form.php', {
+      const response = await fetch('/api/send-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
