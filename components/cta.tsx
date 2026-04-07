@@ -272,20 +272,6 @@ export function CTA() {
                 />
               </div>
 
-              {/* <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="ivan@example.com"
-                  className="w-full px-4 py-3 bg-muted border border-border rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground placeholder:text-muted-foreground"
-                />
-              </div> */}
-
               <div>
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Сообщение
