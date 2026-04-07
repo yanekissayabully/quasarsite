@@ -841,6 +841,7 @@ async function sendToAmoCRM(
     
     const lead = {
       name: leadName.substring(0, 255),
+      pipeline_id: 10779874,
       price: 0,
       _embedded: {
         tags: [
