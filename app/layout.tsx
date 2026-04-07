@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Syne } from "next/font/google"
 // import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import MetaPixel from "@/components/MetaPixel"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
         {children}
         {/* <SplashCursor /> */}
         {/* <Analytics /> */}
+        <MetaPixel/>
       </body>
     </html>
   )
